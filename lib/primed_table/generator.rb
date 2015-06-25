@@ -7,7 +7,13 @@ module PrimedTable
     end
 
     def draw
-      "Draw a table for #{ @count } prime numbers"
+       <<-SAMPLE_TABLE
+        |   2   3   5
+       ----------------
+        2 |   4   6  10
+        3 |   6  10  15
+        5 |  10  15  25
+      SAMPLE_TABLE
     end
   end
 end
