@@ -11,4 +11,4 @@ OptionParser.new do|opts|
   end
 end.parse!
 
-puts "Generate a table for #{ options[:count] } prime numbers"
+puts PrimedTable::Generator.new(options[:count]).draw
