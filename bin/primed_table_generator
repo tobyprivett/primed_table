@@ -1,5 +1,14 @@
 #!/usr/bin/env ruby -wU
 
 require 'primed_table'
+require 'optparse'
 
-puts "hello world"
+options = { count: 5 }
+
+OptionParser.new do|opts|
+  opts.on('-c', '--count count', 'Count') do |count|
+    options[:count] = count;
+  end
+end.parse!
+
+puts "Generate a table for #{ options[:count] } prime numbers"
