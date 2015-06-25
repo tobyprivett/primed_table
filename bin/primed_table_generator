@@ -7,7 +7,7 @@ options = { count: 5 }
 
 OptionParser.new do|opts|
   opts.on('-c', '--count count', 'Count') do |count|
-    options[:count] = count;
+    options[:count] = count.to_i
   end
 end.parse!
 
