@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby -wU
+
+require 'primed_table'
+
+puts "hello world"
